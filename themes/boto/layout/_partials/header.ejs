@@ -1,0 +1,46 @@
+<!-- Page Preloder -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
+
+<!-- Header Section -->
+<header class="header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4 col-md-3 order-2 order-sm-1">
+        <div class="header__social">
+          <a href="#"><i class="fa fa-github"></i></a>
+          <!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
+          <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-6 order-1  order-md-2 text-center">
+        <a href="<%= url_for('/') %>" class="site-logo">
+          <!-- <img src="img/logo.png" alt=""> -->
+          <h3>小鱼的相册&nbsp;xiaoyu's gallery📷</h3>
+        </a>
+      </div>
+      <div class="col-sm-4 col-md-3 order-3 order-sm-3">
+        <div class="header__switches">
+          <a href="<%= url_for('#') %>" class="search-switch"><i class="fa fa-search"></i></a>
+          <a href="<%= url_for('#') %>" class="nav-switch"><i class="fa fa-bars"></i></a>
+          <!-- <a href="#"><i class="fa fa-shopping-cart"></i></a> -->
+        </div>
+      </div>
+    </div>
+    <nav class="main__menu">
+      <ul class="nav__menu">
+        <li><a href="<%= url_for('/index/') %>" class="menu--active">Home</a></li>
+        <li><a href="<%= url_for('/about/') %>">About</a></li>
+        <li><a href="<%= url_for('/gallery/') %>">Gallery</a></li>
+        <li><a href="<%= url_for('/blog/') %>">Blog</a>
+          <ul class="sub__menu">
+            <li><a href="<%= url_for('./blog-single.html') %>">推荐博客</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="<%= url_for('/contact/') %>">Contact</a></li> -->
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- Header Section end -->

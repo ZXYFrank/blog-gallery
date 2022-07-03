@@ -18,7 +18,7 @@ print("gallery_dir = " + gallery_dir)
 gallery_raw_imgs_dir = os.path.join(gallery_dir, "imgs")
 imgs_list = list(sorted(os.listdir(gallery_raw_imgs_dir)))
 print("imgs: ", imgs_list)
-thumbnail_dir = os.path.join(gallery_dir, "thumbnail")
+thumbnail_dir = os.path.join(gallery_dir, "thumbnails")
 os.makedirs(thumbnail_dir, exist_ok=True)
 
 for img_name in imgs_list:

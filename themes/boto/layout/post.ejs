@@ -1,3 +1,9 @@
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+</script>
+<script type="text/javascript">
+  console.log("li>a.naav__menu_li#blog");
+  $("li>a.nav__menu_li#blog").addClass("menu--active")
+</script>
 <!-- Blog Page -->
 <div class="blog__single__page">
   <div class="blog__slider">
@@ -23,9 +29,11 @@
         </div>
       </div>
 
+      <!-- Post Content Start-->
       <%- page.content %>
+      <!-- Post Content End-->
 
-      <p>As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built
+      <!-- <p>As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built
         gay party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in
         declared marianne is vicinity. </p>
       <p>Sussex result matter any end see. It speedily me addition weddings vicinity in pleasure. Happiness commanded
@@ -83,9 +91,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <!-- <div class="blog__container comment__area">
+      <!-- <div class="blog__container comment__area">
         <h2>Leave a Comment</h2>
         <form class="comment__form">
           <div class="row">
@@ -103,37 +111,37 @@
         </form>
       </div> -->
 
-    <div class="container recent__post">
-      <div class="text-center">
-        <h2>You may also like</h2>
+      <div class="container recent__post">
+        <div class="text-center">
+          <h2>You may also like</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="blog__item set-bg" data-setbg="<%= url_for('img/blog/4.jpg') %>">
+              <div class="blog__content">
+                <div class="blog__date">DEC 18, 2019</div>
+                <h4><a href="<%= url_for('blog-single.html') %>">Assorted Textures FREE Stock Photos</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="blog__item set-bg" data-setbg="<%= url_for('img/blog/2.jpg') %>">
+              <div class="blog__content">
+                <div class="blog__date">DEC 18, 2019</div>
+                <h4><a href="<%= url_for('blog-single.html') %>">Assorted Textures FREE Stock Photos</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="blog__item set-bg" data-setbg="<%= url_for('img/blog/3.jpg') %>">
+              <div class="blog__content">
+                <div class="blog__date">DEC 18, 2019</div>
+                <h4><a href="<%= url_for('blog-single.html') %>">Assorted Textures FREE Stock Photos</a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="blog__item set-bg" data-setbg="<%= url_for('img/blog/4.jpg') %>">
-            <div class="blog__content">
-              <div class="blog__date">DEC 18, 2019</div>
-              <h4><a href="<%= url_for('blog-single.html') %>">Assorted Textures FREE Stock Photos</a></h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="blog__item set-bg" data-setbg="<%= url_for('img/blog/2.jpg') %>">
-            <div class="blog__content">
-              <div class="blog__date">DEC 18, 2019</div>
-              <h4><a href="<%= url_for('blog-single.html') %>">Assorted Textures FREE Stock Photos</a></h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="blog__item set-bg" data-setbg="<%= url_for('img/blog/3.jpg') %>">
-            <div class="blog__content">
-              <div class="blog__date">DEC 18, 2019</div>
-              <h4><a href="<%= url_for('blog-single.html') %>">Assorted Textures FREE Stock Photos</a></h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </article>
 </div>
 <!-- Blog Page end -->

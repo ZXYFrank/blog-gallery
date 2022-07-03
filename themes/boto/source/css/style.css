@@ -10,13 +10,12 @@
 /* Template default CSS
 /*----------------------------------------*/
 
-@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 
 html,
 body {
 	height: 100%;
-	font-family: "Arimo", sans-serif;
+	font-family: "Georgia", sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -28,7 +27,6 @@ h5,
 h6 {
 	margin: 0;
 	color: #222222;
-	font-family: "Arimo", sans-serif;
 	font-weight: 700;
 }
 
@@ -124,12 +122,14 @@ ol {
 		border: 4px solid #f44336;
 		border-left-color: transparent;
 	}
+
 	50% {
 		-webkit-transform: rotate(180deg);
 		transform: rotate(180deg);
 		border: 4px solid #673ab7;
 		border-left-color: transparent;
 	}
+
 	100% {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
@@ -144,11 +144,13 @@ ol {
 		border: 4px solid #f44336;
 		border-left-color: transparent;
 	}
+
 	50% {
 		-webkit-transform: rotate(180deg);
 		border: 4px solid #673ab7;
 		border-left-color: transparent;
 	}
+
 	100% {
 		-webkit-transform: rotate(360deg);
 		border: 4px solid #f44336;
@@ -370,6 +372,7 @@ ol {
 }
 
 @media (max-width: 576px) {
+
 	.header__social a.nav-switch,
 	.header__switches a.nav-switch {
 		display: inline-block;
@@ -684,6 +687,9 @@ ol {
 
 .about__text img {
 	padding-top: 20px;
+	padding: 1%;
+	margin: 3%;
+	box-shadow: 0.01em 0.01em 0.1em 0.03em rgb(0 0 0 / 20%);
 }
 
 .about__meta {
@@ -777,6 +783,13 @@ ol {
 
 .gallery__item img {
 	min-width: 100%;
+	background: #fff;
+	position: relative;
+	display: block;
+	height: auto;
+	padding: 1%;
+	margin: 3%;
+	box-shadow: 0.01em 0.01em 0.1em 0.03em rgb(0 0 0 / 20%);
 }
 
 .fr-position-outside {
@@ -1021,7 +1034,6 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 
 .post__tags a {
 	display: inline-block;
-	font-family: "Raleway", sans-serif;
 	color: #7E858B;
 	font-size: 12px;
 	font-weight: 700;

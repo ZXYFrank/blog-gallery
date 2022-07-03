@@ -4,7 +4,7 @@ var path = require("path");
 const base_dir = hexo.base_dir;
 console.log("base_dir: " + base_dir);
 hexo.extend.helper.register("getGalleryPhotoNames", function () {
-  root = path.resolve(base_dir, "source/gallery/imgs");
+  var root = path.resolve(base_dir, "source/gallery/imgs");
   console.log("getGalleryPhotoNames from: " + root);
   var files = fs.readdirSync(root);
   console.log("files: " + files);

@@ -6,7 +6,7 @@
 </script>
 <!-- Blog Page -->
 <div class="blog__single__page">
-  <div class="blog__slider">
+  <!-- <div class="blog__slider">
     <div class="blog__slider__item">
       <img src="<%= url_for('img/blog-single/1.jpg') %>" alt="">
     </div>
@@ -16,18 +16,38 @@
     <div class="blog__slider__item">
       <img src="<%= url_for('img/blog-single/3.jpg') %>" alt="">
     </div>
+  </div> -->
+
+
+  <div class="blog__header">
+    <h2 class="blog__single__title">9 Reasons to Buy a 50mm Prime Lens & Skip the Kit Lens</h2>
+    <div class="blog__metas">
+      <div class="blog__meta">By Colorlib </div>
+      <div class="blog__meta">December 27, 2019</div>
+      <div class="blog__meta">No Comments</div>
+    </div>
+    <!-- https://hexo.io/docs/variables -->
+    <% if (page.categories.length > 0){ %>
+    <% var catArray=listCategories(page); %>
+    <% for (let cat of catArray){ %>
+    <div class="blog__cata">
+      <% console.log(cat); %>
+      <%- cat %>
+    </div>
+    <%} %>
+    <%} %>
+
+    <!-- ========header_image======== -->
+    <% if (page.header_img){ %>
+    <% 
+      var img_url = url_for(page.header_img);
+      console.log("header image for",page.title,":",img_url);
+      %>
+    <img src="<%= img_url %>" class="blog__header_img">
+    <%} %>
   </div>
   <article class="blog__article">
     <div class="blog__container">
-      <div class="blog__header">
-        <div class="blog__cata">Photography</div>
-        <h2 class="blog__single__title">9 Reasons to Buy a 50mm Prime Lens & Skip the Kit Lens</h2>
-        <div class="blog__metas">
-          <div class="blog__meta">By Colorlib </div>
-          <div class="blog__meta">December 27, 2019</div>
-          <div class="blog__meta">No Comments</div>
-        </div>
-      </div>
 
       <!-- Post Content Start-->
       <%- page.content %>
@@ -111,38 +131,8 @@
         </form>
       </div> -->
 
-      <div class="container recent__post">
-        <div class="text-center">
-          <h2>You may also like</h2>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="blog__item set-bg" data-setbg="<%= url_for('img/blog/4.jpg') %>">
-              <div class="blog__content">
-                <div class="blog__date">DEC 18, 2019</div>
-                <h4><a href="<%= url_for('blog-single.html') %>">Assorted Textures FREE Stock Photos</a></h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="blog__item set-bg" data-setbg="<%= url_for('img/blog/2.jpg') %>">
-              <div class="blog__content">
-                <div class="blog__date">DEC 18, 2019</div>
-                <h4><a href="<%= url_for('blog-single.html') %>">Assorted Textures FREE Stock Photos</a></h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="blog__item set-bg" data-setbg="<%= url_for('img/blog/3.jpg') %>">
-              <div class="blog__content">
-                <div class="blog__date">DEC 18, 2019</div>
-                <h4><a href="<%= url_for('blog-single.html') %>">Assorted Textures FREE Stock Photos</a></h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
   </article>
+  <%- partial('_partials/recent_posts.ejs') %>
 </div>
 <!-- Blog Page end -->
 

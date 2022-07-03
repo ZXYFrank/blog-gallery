@@ -816,6 +816,19 @@ ol {
    Blog Page
  ----------------*/
 
+
+.blog__header {
+	text-align: center;
+}
+
+.blog__header>.blog__header_img {
+	max-width: 90%;
+	padding: 0.5em;
+	padding: 1%;
+	margin: 3%;
+	box-shadow: 0.01em 0.01em 0.1em 0.03em rgb(0 0 0 / 20%);
+}
+
 .blog__page {
 	padding: 90px 0 55px;
 }
@@ -935,9 +948,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 	margin-bottom: 20px;
 }
 
-.blog__header {
-	text-align: center;
-}
+
 
 .blog__cata {
 	display: inline-block;
@@ -952,7 +963,8 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 
 .blog__single__title {
 	font-size: 44px;
-	margin-bottom: 30px;
+	margin-top: 1em;
+	margin-bottom: 1em;
 	line-height: 1.2;
 }
 
@@ -1015,6 +1027,14 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 	text-transform: uppercase;
 	color: #8DB952;
 	letter-spacing: 2px;
+}
+
+.blog__article img {
+	padding: 1%;
+	margin: auto;
+	display: block;
+	max-width: 75%;
+	box-shadow: 0.01em 0.01em 0.1em 0.03em rgb(0 0 0 / 20%);
 }
 
 .blog__banner {

@@ -13,16 +13,8 @@ hexo.extend.helper.register("getGalleryPhotoNames", function () {
 
 // call python
 
-console.log("theme_dir", hexo.theme_dir);
+var galleryDir = path.resolve(hexo.base_dir, "source/gallery/");
 python.callPython(
   path.resolve(hexo.theme_dir, "scripts/utils/python/thumbnail.py"),
-  null,
-  function (data) {
-    console.log("success!");
-    console.log("data: " + JSON.stringify(data));
-  },
-  (data) => {
-    console.log("failed!");
-    console.log("data: " + JSON.stringify(data));
-  }
+  [galleryDir]
 );

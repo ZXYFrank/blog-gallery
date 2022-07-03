@@ -1,72 +1,22 @@
 <!-- Gallery Page -->
 <% console.log("Gallery Page: "+ page.path); 
- var photos=console.log(get_all_photos(path)); 
- console.log("Photos: "+ photos);
+ var photos=get_gallery_photo_names(path); 
+ console.log("return photos: "+ photos);
 %>
 
 <div class="gallery__page">
   <div class="gallery__warp">
     <div class="row">
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/1.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/1.jpg" alt="">
+      <% for (let path of photos){ %>
+      <% var link=url_for("/gallery/imgs/"+path) %>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <a class="gallery__item fresco" href="<%= link %> " data-fresco-group="gallery">
+          <img src="<%= link %>" alt="">
         </a>
       </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/2.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/2.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/3.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/3.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/4.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/4.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/5.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/5.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/6.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/6.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/7.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/7.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/8.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/8.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/9.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/9.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/10.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/10.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/11.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/11.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <a class="gallery__item fresco" href="img/gallery/12.jpg" data-fresco-group="gallery">
-          <img src="img/gallery/12.jpg" alt="">
-        </a>
-      </div>
+      <%} %>
+
     </div>
   </div>
 </div>
